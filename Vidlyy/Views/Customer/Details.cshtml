@@ -1,0 +1,15 @@
+﻿@model Vidlyy.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<p>Customer ID   : @Model.Id</p>
+<p>Customer Name : @Model.Name</p>
+@if (Model.BirthDate != null)
+{
+<p>Customer BirthDate : @Model.BirthDate</p>}
+

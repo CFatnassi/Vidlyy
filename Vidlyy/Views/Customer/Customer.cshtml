@@ -1,0 +1,23 @@
+﻿@model List<Vidlyy.Models.Customer>
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+<table class=“table table-bordered table-hover”>
+    <tr><th>customer</th>
+    
+    <th>Membership Type</th></tr>
+    @foreach (var customer in Model)
+    {
+        <tbody>
+            <tr>
+                <td><a href='/Customer/Details/@customer.Id'>@customer.Name</a></td>
+                <td>@customer.MembershipType.Name</td>
+            </tr>
+        </tbody>
+    }
+</table>
+
